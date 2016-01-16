@@ -207,7 +207,9 @@ pre,code{
 	.thumbnail{
 		padding: 0px;
 		margin-bottom: 0px;
-		border-radius: 0px;
+		img{
+			border-radius: 3px;
+		}
 		border: 0px;
 	}
 	.post-main{
@@ -304,7 +306,7 @@ pre,code{
 					article{	
 						margin: 0 0 0 0;
 						margin-bottom:30px;
-						padding:5px;
+						padding:15px;
 						border-radius: 0px;
 						.thumbnail{
 							display: none;
@@ -335,9 +337,8 @@ pre,code{
 			}
 			.post{
 				margin: 0 0 0 0;
-				border-bottom:1px solid #ccc;
+				padding: 15px;
 				.post-main{
-					padding: 15px;
 					font-size: 14px;
 				}
 			}
