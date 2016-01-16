@@ -14,7 +14,19 @@
     </div>
 
     {% include simple_footer.html %}
-    
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"mooncity"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
   <script src="{{ site.baseurl }}/{{ site.bootstrapurl }}/js/jquery-1.11.3.min.js"></script>
   <script src="{{ site.baseurl }}/{{ site.bootstrapurl }}/js/bootstrap.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/script.js"></script>
