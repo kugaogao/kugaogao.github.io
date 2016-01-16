@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="home">
+
+
+  <div class="post-list">
+    {% for post in paginator.posts %}
+      <article>
+        <div class="post-main fl-l">
+          <header class="post-header">
+            <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+         </header><!--post-header-->
+          <div class="excerpt">{{ post.excerpt }}</div>
+          <a class="read-more" href="{{ site.baseurl }}{{ post.url }}">阅读更多 »</a>
+          <footer class="post-footer">
+             <span class="post-meta">{{ post.date | date: "%b %-d %Y" }}</span>
+           {% if post.categories %}
+             {% for ca in post.categories %}
+               <span>{{ ca | upcase }}</span>
+             {% endfor %}
+           {% endif %}
+          </footer>
+        </div><!--post-main-->
+      </article>
+    {% endfor %}
+  </div>
+  <!-- 分页链接 -->
+  <ul class="pagination">
+      <li class="previous"><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" ><i class=" icon-double-angle-left"></i></a></li>
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == 1 %}
+          <li><a href="/">{{ page }}</a></li>
+        {% elsif page == paginator.page %}
+          <li  class="active"><a href="{{ site.baseurl }}/archives/page/{{ page }}">{{ page }}</a></li>
+        {% else %}
+          <li><a href="{{ site.baseurl }}/archives/page/{{ page }}">{{ page }}</a></li>
+        {% endif %}
+      {% endfor %}
+      <li class="next"><a href="{{ site.baseurl }}{{ paginator.next_page_path }}"><i class=" icon-double-angle-right"></i></a></li>
+  </ul><!--pagination-->
+
+</div>

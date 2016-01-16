@@ -1,0 +1,12 @@
+<div class="post-navigation">
+  {% if page.previous %}
+    <a class="previous" href="{{ site.baseurl }}{{ page.previous.url }}">上一篇</a> 
+  {% else%}
+    <span class="previous">上一篇</span> 
+  {% endif %}
+  {% if page.next %}
+    <a class="next" href="{{ site.baseurl }}{{ page.next.url }}">下一篇</a> 
+  {% else %}
+    <span class="next">下一篇</span> 
+  {% endif %}
+</div>

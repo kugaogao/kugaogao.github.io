@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include simple_footer.html %}
+    
+  <script src="{{ site.baseurl }}/{{ site.bootstrapurl }}/js/jquery-1.11.3.min.js"></script>
+  <script src="{{ site.baseurl }}/{{ site.bootstrapurl }}/js/bootstrap.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+  </body>
+
+</html>

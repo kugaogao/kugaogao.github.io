@@ -1,0 +1,21 @@
+<header class="site-header">
+
+  <div class="wrapper">
+      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <div class="site-navigation">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}"><i>{{ my_page.title }}</i></a>
+          {% endif %}
+        {% endfor %}
+      </div><!--site-nav-->
+      {% if site.data.sns %}
+        <div class="sns-list">
+          {% for s in site.data.sns %}
+            <a href="{{ s.url }}" class="{{ s.name }}"><i class="{{ s.class }}"></i></a>
+          {% endfor %}
+        </div>
+      {% endif %}
+  </div>
+
+</header>
